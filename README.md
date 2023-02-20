@@ -54,7 +54,7 @@ user_accounts.txt on the server side and client.c on the client side
 ```
 
 ```
- The "menu" itself on the client side is quite intuitive and good
+ The "menu" itself on the client side is quite intuitive and well
 designed to easily map commands from a task
  Each command opens up a new level and its own unique options
 ```
