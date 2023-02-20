@@ -3,71 +3,68 @@
 
 #### FILIP UNČANIN
 
-# Elektronski registar za evidenciju izdatih umetničkih dela
+# eRegister For Reserving Artworks
 
 
-## ZADATAK
-
-```
- Realizovati primer namenskog sistema elektronskog registra za
-evidenciju izdatih umetničkih dela pomoću TCP protokola.
- Primer se sastoji iz klijentske strane (korisnik) i serverske strane
-(elektronski registar).
-```
-
-Klijent preko tastature može da zadaje sledeće komande koje se šalju
-serveru:
+## Main task
 
 ```
- Login – prijava/registracija korisnika (npr. putem korisničkog imena ili broja
-članske kartice i korisničke šifre)
- Logout – odjava korisnika
- Search – pretraga dostupnih sadržaja elektronskog registra
- SearchAll – pretraga svih sadržaja elektronskog registra
+ Realize an example of a dedicated electronic registry system for
+records of issued works of art using the TCP protocol.
+ The example consists of a client side (user) and a server side
+(electronic register).
+```
+
+The client can use the keyboard to set the following commands to be sent to the server:
+
+```
+ Login – user login/registration (e.g. via username or number
+membership cards and user password)
+ Logout – user logout
+ Search – search of available contents of the electronic register
+ SearchAll – search of all contents of the electronic register
  Search [id:ID] [author:AUTHOR] [truncated art work name:NAME] [year:YEAR] –
-pretraga za zadatke kriterijume (sve ili pojedine)
- CheckStatus – provera dobavljenih sadržaja prijavljenog korsinika
- Reserve [id:ID] – rezervacija umetničkog dela od strane prijavljenog korisnika po
-ID-u umetničkog dela
+search for certain criteria (all or individual)
+ CheckStatus – checking the supplied contents of the registered user
+ Reserve [id:ID] – reservation of the artwork by the registered user by
+ID of the artwork
 ```
 
-Server na date komande šalje odgovarajuće odgovore koji se prikazuju na
-ekranu klijentske aplikacije.
-Napomene:
+The server sends corresponding responses to the given commands, which are displayed on client application screen.
+Notes:
 
 ```
- Svako umetničko delo elektronskog registra poseduje jedinstven ID
- Svaki korisnik elektronskog registra prilikom procesa registracije dobija jedinstven
-broj članske kartice
+ Each artwork in the electronic registry has a unique ID
+ Each user of the electronic register receives a unique membership card number during the registration process
 ```
 
-## Aplikacija
+## The application
 
 ```
- Aplikacija se sastoji od datoteka server.c, artworks.txti
-user_accounts.txtsa serverske strane i client.csa klijentske strane
- Prvo pokrećemo server a zatim klijent
- Nakon uspostave veze ispisuje se serverska poruka klijentu
- Klijenat je u obavezi da se prijavi na samom početku
-```
-
-```
- artworks.txtpredstavlja „bazu“ umetničkih dela
- user_accounts.txt predstavlja ,,bazu“ korisnika
+ The application consists of server.c, artworks.txt and
+user_accounts.txt on the server side and client.c on the client side
+ First we start the server and then the client
+ After the connection is established, a server message is printed to the client
+ The client is obliged to register at the very beginning
 ```
 
 ```
- Sam ,,meni“ na klijentskoj strani je poprilično intuitivan i dobro
-osmišljen tako da lako oslikava komande iz zadatka
- Svaka komanda otvara novi nivo i izbacuje svoje jedinstvene opcije
+ artworks.txt represents a "database" of artworks
+ user_accounts.txt represents a ,,database“ of users
+```
+
+```
+ The "menu" itself on the client side is quite intuitive and good
+designed to easily map commands from a task
+ Each command opens up a new level and its own unique options
 ```
 
 
-## Kompajliranje:
-	-posebno se prevode server.c i client.c u odvojenim terminalima (sa mogućnošću otvaranja više terminala za client.c tj. više klijenata)
-	-vrši se pomoću komandi "make server" i "make client"
-	-brisanje izvršnih fajlova se vrši sa "make server_clean" i "make client_clean"
+## Compiling:
+	-server.c and client.c are compiled in separate terminals (with the possibility of opening multiple terminals for client.c, i.e. multiple clients)
+	-is done using the "make server" and "make client" commands
+	-deleting executable files is done with "make server_clean" and "make client_clean"
 
-## Pokretanje:
-	-pokretanje se vrši sa komandama "./server" koji se prvi pokreće a zatim i "./client"
-	-za izlaženje iz aplikacije koristimo CTRL+C
+## Startup:
+	-starting is done with the commands "./server" which is started first and then "./client"
+	-to exit the application, use CTRL+C
