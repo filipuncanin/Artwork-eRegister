@@ -3,9 +3,7 @@
 
 #### FILIP UNČANIN
 
-# Elektronski registar za evidenciju
-
-# izdatih umetničkih dela
+# Elektronski registar za evidenciju izdatih umetničkih dela
 
 
 ## ZADATAK
