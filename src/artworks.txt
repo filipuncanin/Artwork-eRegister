@@ -1,0 +1,30 @@
+1
+Leonardo da Vinci
+MonaLisa
+1503
+-1
+2
+Leonardo da Vinci
+TheLastSupper
+1495
+0
+3
+Vincent van Gogh
+TheStarryNight
+1889
+-1
+4
+Edvard Munch
+TheScream
+1893
+-1
+5
+Pablo Picasso
+Guernica
+1937
+-1
+6
+Gustav Klimt
+TheKiss
+1907
+-1
