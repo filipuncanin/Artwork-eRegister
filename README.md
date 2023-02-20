@@ -61,3 +61,13 @@ user_accounts.txtsa serverske strane i client.csa klijentske strane
 osmišljen tako da lako oslikava komande iz zadatka
  Svaka komanda otvara novi nivo i izbacuje svoje jedinstvene opcije
 ```
+
+
+##Kompajliranje:
+	-posebno se prevode server.c i client.c u odvojenim terminalima (sa mogućnošću otvaranja više terminala za client.c tj. više klijenata)
+	-vrši se pomoću komandi "make server" i "make client"
+	-brisanje izvršnih fajlova se vrši sa "make server_clean" i "make client_clean"
+
+##Pokretanje:
+	-pokretanje se vrši sa komandama "./server" koji se prvi pokreće a zatim i "./client"
+	-za izlaženje iz aplikacije koristimo CTRL+C
