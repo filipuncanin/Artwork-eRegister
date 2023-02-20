@@ -63,11 +63,11 @@ osmišljen tako da lako oslikava komande iz zadatka
 ```
 
 
-##Kompajliranje:
+## Kompajliranje:
 	-posebno se prevode server.c i client.c u odvojenim terminalima (sa mogućnošću otvaranja više terminala za client.c tj. više klijenata)
 	-vrši se pomoću komandi "make server" i "make client"
 	-brisanje izvršnih fajlova se vrši sa "make server_clean" i "make client_clean"
 
-##Pokretanje:
+## Pokretanje:
 	-pokretanje se vrši sa komandama "./server" koji se prvi pokreće a zatim i "./client"
 	-za izlaženje iz aplikacije koristimo CTRL+C
