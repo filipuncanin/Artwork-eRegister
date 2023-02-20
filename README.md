@@ -41,77 +41,6 @@ Napomene:
 broj članske kartice
 ```
 
-## TCP protokol
-
-```
- Uspostavljanje veze između dva hosta TCP protokol ostvaruje kroz
-postupak koji se naziva trostruko rukovanje (Three-Way Handshake)
- Trostruko rukovanje predstavlja razmenu tri upravljačke poruke
-između hostova koji žele da komuniciraju
-```
-
-### Trostruko rukovanje (TCP)
-
-```
- U prvom koraku računar koji inicira vezu prvo šalje SYN
-(Synchronization) poruku koja predstavlja segment sa postavljenim
-SYN bitom na 1, čime se druga strana obaveštava da se s njom želi
-komunicirati
- U drugom koraku pozvani računar odgovara tako što šalje segment
-kojim potvrđuje prijem
- U trećem koraku računar koji je inicirao vezu šalje segment kojim
-potvrđuje prijem segmenta i počinje da šalje svoje podatke
- Kada se prenesu svi podaci, računari trostrukim rukovanjem
-razmenjuju segmente koji sadrže FIN (Final) bit kojim se veza prekida
-```
-
-### Adresiranje aplikacija (TCP)
-
-```
- Za adresiranje aplikacija i procesa kao krajnjih tačaka (end points) u
-komunikaciji koriste se virtuelni portovi
- Svaka strana u komunikaciji (aplikacija) koristi svoj vlastiti broj porta
- Naziv virtuelni dolazi od toga što se jedna fizička veza koristi za
-uspostavljanje više softverskih veza
- Brojevi portova se kreću od 0 do 65534 i upisuju se u polje dužine 16
-bita u TCP zaglavlju
- Na osnovu broja porta, protokoli transportnog sloja tačno znaju kojoj
-aplikaciji, odnosno procesu treba da isporuče podatke
-```
-
-### Pouzdana isporuka (TCP)
-
-```
- TCP protokol se koristi za slanje veće količine podataka
- On je napravljen tako da osigura pouzdanu isporuku podataka
-preko nepouzdanih mreža koje mogu da imaju različitu topologiju,
-tehnologiju, propusni opseg, vreme kašnjenja, veličinu paketa itd
- TCP je konekciono orijentisan protokol. To znači da pre nego počne
-sa slanjem podataka, prethodno uspostavi vezu sa prijemnim
-računarom
- Pouzdana isporuka paketa se ostvaruje sistemom sekvenciranja i
-potvrđivanja
-```
-
-### Sekvenciranje (TCP)
-
-```
- Sekvenciranjem se segmenti dele na manje pakete koji se onda
-šalju jednom ili preko više različitih putanja do prijemnog računara
- Ovi paketi na odredište mogu da stignu u različito vreme i u
-nepravilnom rasporedu
- Na osnovu broja paketa na prijemnom računaru se vrši njihovo
-ponovno spajanje u originalni segment
- Za svaki ispravno primljeni paket, prijemni računar šalje potvrdu o
-njegovom prijemu
- Prijemni računar ne šalje potvrdu o paketima koji nisu stigli ili su stigli
-oštećeni
- Umesto toga, predajni računar za svaki paket kada ga pošalje
-postavi tajmer na određeno vreme
- Ako vreme istekne pre nego što stigne potvrda o prijemu paketa,
-paket se ponovo šalje
-```
-
 ## Aplikacija
 
 ```
@@ -122,14 +51,10 @@ user_accounts.txtsa serverske strane i client.csa klijentske strane
  Klijenat je u obavezi da se prijavi na samom početku
 ```
 
-## Aplikacija
-
 ```
  artworks.txtpredstavlja „bazu“ umetničkih dela
  user_accounts.txt predstavlja ,,bazu“ korisnika
 ```
-
-## Aplikacija
 
 ```
  Sam ,,meni“ na klijentskoj strani je poprilično intuitivan i dobro
