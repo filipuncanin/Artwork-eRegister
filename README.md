@@ -3,7 +3,7 @@
 
 #### FILIP UNČANIN
 
-# eRegister For Reserving Artworks
+# eRegister for the Reservation of Artworks
 
 
 ## Main task
